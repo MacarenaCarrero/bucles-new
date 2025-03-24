@@ -60,7 +60,7 @@ const prices = [23, 78, 45];
 
 const addPrices = () => {
   for (const value of prices) {
-    console.log(value[0] + value[1] + value[2]);
+    console.log(value);
   }
 };
 addPrices();
