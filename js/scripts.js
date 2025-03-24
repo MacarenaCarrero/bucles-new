@@ -55,12 +55,28 @@ const namesToUpperCase = () => {
 namesToUpperCase();
 
 // 2️⃣ Bego tiene un array con precios. Debe sumar todos los precios usando un bucle for y mostrar el total. Ejemplo entrada: [23, 78, 45] Ejemplo salida: Total: 146
-
 const prices = [23, 78, 45];
 
 const addPrices = () => {
-  for (const value of prices) {
-    console.log(value);
+  let totalAmount = 0;
+
+  for (const price of prices) {
+    totalAmount = price + totalAmount;
   }
+  console.log(totalAmount);
 };
 addPrices();
+console.log('----------------');
+// 3️⃣ Macarena quiere generar tres códigos de seguridad y almacenarlos en un array. Cada código debe ser un número aleatorio entre 1000 y 9999. Usa un bucle for para generar los códigos y luego mostrarlos. Ejemplo salida: [4356, 7890, 1234]
+
+const generatorCode = () => {
+  let numbersCode = [];
+  for (let i = 0; i < 3; i++) {
+    const calucalteNumber = Math.floor(Math.random() * (9999 - 1000) + 1000);
+    numbersCode.push(calucalteNumber);
+  }
+  console.log(numbersCode);
+};
+generatorCode();
+
+// 4️⃣ Abby encontró una lista de suministros en un refugio: ['Agua', 'Munición', 'Botiquín', 'Czst']. Debe comprobar si todos los elementos contienen al menos una vocal. Ejemplo salida: Agua contiene vocales. Munición contiene vocales. Botiquín contiene vocales. Czst no contiene vocales.
